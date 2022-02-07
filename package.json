@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/",
+    "loadtest": "loadtest -n 1000 -c 100 --rps 200 http://localhost:3000/fib/calculate?number=40",
+    "artillery": "artillery quick --count 10 -n 20 http://localhost:3000/fib/calculate?number=40"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +21,8 @@
     "response-time": "^2.3.2"
   },
   "devDependencies": {
+    "artillery": "^2.0.0-11",
+    "loadtest": "^5.1.2",
     "nodemon": "^2.0.15"
   }
 }
