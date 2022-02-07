@@ -1,0 +1,17 @@
+###
+GET http://localhost:3000/api
+
+###
+GET http://localhost:3000/fib
+
+###
+GET http://localhost:3000/fib/calculate?number=10
+
+###
+GET http://localhost:3000/fib/calculate?number=20
+
+###
+GET http://localhost:3000/fib/calculate?number=45
+
+###
+GET http://localhost:3000/fib/calculate?number=5
