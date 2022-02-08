@@ -9,8 +9,9 @@ router.get('/', (req, res) => {
 
 
 router.get("/calculate", (request, response) => {
-  logger.info(`Worker ${worker.id} with process Id ${worker.process.pid} has accepted the request!`);
+  logger.info(`Worker ${worker.id} has accepted the request!`);
   let number = fabObj.calculateFibonacciValue(Number.parseInt(request.query.number));
+  // logger.info(`Worker ${worker.id} complete the request!`);
   response.send(`<h1>${number}</h1>`);
 });
 
